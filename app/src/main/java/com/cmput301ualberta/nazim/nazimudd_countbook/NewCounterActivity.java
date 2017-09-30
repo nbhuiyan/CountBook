@@ -3,7 +3,7 @@ package com.cmput301ualberta.nazim.nazimudd_countbook;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class NewCounter extends AppCompatActivity {
+public class NewCounterActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
