@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".CounterDetailsActivity" />
-        <activity android:name=".EditValueActivity"></activity>
+        <activity android:name=".EditValueActivity" />
+        <activity android:name=".NewCounter"></activity>
     </application>
 
 </manifest>
