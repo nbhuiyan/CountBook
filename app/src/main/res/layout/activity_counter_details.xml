@@ -7,7 +7,7 @@
     tools:context="com.cmput301ualberta.nazim.nazimudd_countbook.CounterDetailsActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/detailDecrease"
         android:layout_width="114dp"
         android:layout_height="48dp"
         android:layout_marginBottom="8dp"
@@ -15,39 +15,39 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="0dp"
         android:text="-"
-        app:layout_constraintBottom_toBottomOf="@+id/button3"
+        app:layout_constraintBottom_toBottomOf="@+id/detailIncrease"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/button2"
-        app:layout_constraintTop_toTopOf="@+id/button3"
+        app:layout_constraintRight_toLeftOf="@+id/detailReset"
+        app:layout_constraintTop_toTopOf="@+id/detailIncrease"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/detailReset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="8dp"
         android:text="Reset"
         app:layout_constraintHorizontal_bias="0.936"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/button3"
+        app:layout_constraintRight_toLeftOf="@+id/detailIncrease"
         tools:layout_editor_absoluteY="327dp" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/detailIncrease"
         android:layout_width="114dp"
         android:layout_height="48dp"
         android:layout_marginBottom="8dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="0dp"
         android:text="+"
-        app:layout_constraintBottom_toBottomOf="@+id/button2"
+        app:layout_constraintBottom_toBottomOf="@+id/detailReset"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button2"
+        app:layout_constraintTop_toTopOf="@+id/detailReset"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/detailDelete"
         android:layout_width="158dp"
         android:layout_height="48dp"
         android:layout_marginBottom="16dp"
@@ -56,49 +56,63 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/detailReset"
         app:layout_constraintVertical_bias="0.603" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/detailCounterValue"
         android:layout_width="177dp"
         android:layout_height="83dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:text="CounterValue"
+        android:textAlignment="center"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         tools:layout_editor_absoluteY="74dp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/detailCounterName"
         android:layout_width="230dp"
         android:layout_height="38dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:text="CounterName"
+        android:textAlignment="center"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         tools:layout_editor_absoluteY="28dp" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="136dp"
+        android:id="@+id/detailInitialValue"
+        android:layout_width="111dp"
         android:layout_height="30dp"
         android:layout_marginLeft="37dp"
         android:layout_marginRight="8dp"
         android:text="InitialValue"
-        app:layout_constraintHorizontal_bias="1.0"
+        android:textAlignment="center"
+        app:layout_constraintHorizontal_bias="0.784"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/textView4"
+        app:layout_constraintRight_toLeftOf="@+id/detailLastModified"
         tools:layout_editor_absoluteY="175dp" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/detailLastModified"
         android:layout_width="129dp"
         android:layout_height="30dp"
-        android:layout_marginRight="37dp"
+        android:layout_marginRight="48dp"
         android:text="LastModified"
+        android:textAlignment="center"
         app:layout_constraintRight_toRightOf="parent"
         tools:layout_editor_absoluteY="175dp" />
+
+    <TextView
+        android:id="@+id/detailMessage"
+        android:layout_width="335dp"
+        android:layout_height="63dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="235dp" />
 </android.support.constraint.ConstraintLayout>

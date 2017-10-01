@@ -15,18 +15,22 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
-        tools:layout_editor_absoluteY="103dp"
-        tools:layout_editor_absoluteX="153dp" />
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="103dp" />
 
     <EditText
         android:id="@+id/editText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="25dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteY="235dp"
-        tools:layout_editor_absoluteX="153dp" />
+        android:text="Text"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText4" />
 
     <EditText
         android:id="@+id/editText4"
@@ -35,42 +39,61 @@
         android:ems="10"
         android:inputType="number"
         android:text="0"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="170dp" />
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/newNameTextView"
         android:layout_width="114dp"
         android:layout_height="42dp"
         android:layout_marginLeft="16dp"
-        android:text="Name"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="103dp"
+        android:text="Counter Name"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintLeft_toLeftOf="parent"
-        tools:layout_editor_absoluteY="103dp" />
+        app:layout_constraintRight_toLeftOf="@+id/editText2"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/newInitValTextView"
         android:layout_width="116dp"
         android:layout_height="40dp"
         android:layout_marginLeft="16dp"
-        android:text="Start from"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="25dp"
+        android:text="Initial Value"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintLeft_toLeftOf="parent"
-        tools:layout_editor_absoluteY="170dp" />
+        app:layout_constraintRight_toLeftOf="@+id/editText4"
+        app:layout_constraintTop_toBottomOf="@+id/newNameTextView" />
 
     <TextView
-        android:id="@+id/textView8"
-        android:layout_width="115dp"
-        android:layout_height="40dp"
+        android:id="@+id/newCommentTextView"
+        android:layout_width="120dp"
+        android:layout_height="49dp"
         android:layout_marginLeft="16dp"
-        android:text="Comment"
+        android:layout_marginRight="8dp"
+        android:text="Message (Optional)"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/editText3"
         tools:layout_editor_absoluteY="235dp" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/newCreateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Create"
-        tools:layout_editor_absoluteY="312dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="312dp" />
 </android.support.constraint.ConstraintLayout>
