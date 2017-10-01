@@ -12,14 +12,42 @@ public class Counter {
     private Date date;
     private Integer currentValue;
     private Integer initialValue;
-    private String comment;
+    private String message;
 
-    public Counter(String name, Integer initialValue, String comment){
+    public Counter(String name, Integer initialValue, String message){
         this.name = name;
         this.date = new Date();
         this.currentValue = initialValue;
         this.initialValue = initialValue;
-        this.comment = comment;
+        this.message = message;
+    }
+
+    public Counter(String name, Integer initialValue){
+        this.name = name;
+        this.date = new Date();
+        this.currentValue = initialValue;
+        this.initialValue = initialValue;
+        this.message = "";
+    }
+
+    public boolean increment(){
+        if(this.currentValue>=0){
+            this.currentValue++;
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public boolean decrement(){
+        if(this.currentValue>0){
+            this.currentValue--;
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     public String getName() {
@@ -34,15 +62,11 @@ public class Counter {
         return date;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
     public Integer getCurrentValue() {
         return currentValue;
     }
 
-    public void setCurrentValue(int currentValue) {
+    public void setCurrentValue(Integer currentValue) {
         this.currentValue = currentValue;
     }
 
@@ -54,11 +78,11 @@ public class Counter {
         this.initialValue = initialValue;
     }
 
-    public String getComment() {
-        return comment;
+    public String setMessage() {
+        return message;
     }
 
-    public void setComment(String comment) {
-        this.comment = comment;
+    public void setMessage(String comment) {
+        this.message = comment;
     }
 }
