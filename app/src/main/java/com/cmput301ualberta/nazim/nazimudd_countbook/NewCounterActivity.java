@@ -20,9 +20,9 @@ public class NewCounterActivity extends AppCompatActivity {
     }
 
     public void addCounter(View view){
-        EditText newName = (EditText) findViewById(R.id.newName);
-        EditText newInitVal = (EditText) findViewById(R.id.newInitVal);
-        EditText newMessage = (EditText) findViewById(R.id.newMessage);
+        EditText newName = (EditText) findViewById(R.id.newNameEditText);
+        EditText newInitVal = (EditText) findViewById(R.id.newInitValueEditText);
+        EditText newMessage = (EditText) findViewById(R.id.newMessageEditText);
 
         Intent intent = getIntent();
 
