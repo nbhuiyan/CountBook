@@ -12,13 +12,13 @@
         android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="103dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
-        android:layout_marginRight="8dp"
+        android:text="Enter Name"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="103dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editText3"
@@ -28,7 +28,7 @@
         android:layout_marginTop="25dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Text"
+        android:text="Enter Text"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText4" />
 
@@ -36,12 +36,12 @@
         android:id="@+id/editText4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="25dp"
         android:ems="10"
         android:inputType="number"
-        android:text="0"
-        android:layout_marginRight="8dp"
+        android:text="Enter Starting Value"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="25dp"
         app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
     <TextView
@@ -65,8 +65,8 @@
         android:layout_height="40dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="25dp"
-        android:text="Initial Value"
+        android:layout_marginTop="26dp"
+        android:text="Initial\n Value"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintHorizontal_bias="0.571"
@@ -83,10 +83,11 @@
         android:text="Message (Optional)"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintHorizontal_bias="0.705"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/editText3"
-        tools:layout_editor_absoluteY="235dp" />
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/newInitValTextView" />
 
     <Button
         android:id="@+id/newCreateButton"
@@ -95,5 +96,6 @@
         android:text="Create"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="312dp" />
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/editText3" />
 </android.support.constraint.ConstraintLayout>
