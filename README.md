@@ -27,7 +27,7 @@ The app should allow the user to:
 
 # [Video Demo](https://www.youtube.com/watch?v=R_oRr9cs6Tk)
 
-# [UML Diagram](https://github.com/nbhuiyan/nazimudd-CountBook/blob/master/app/doc/CountBookUML.png)
+# [UML Diagram](https://github.com/nbhuiyan/nazimudd-CountBook/blob/master/doc/CountBookUML.png)
 
 # [APK](https://github.com/nbhuiyan/nazimudd-CountBook/blob/master/app/build/outputs/apk/app-debug.apk)
 
