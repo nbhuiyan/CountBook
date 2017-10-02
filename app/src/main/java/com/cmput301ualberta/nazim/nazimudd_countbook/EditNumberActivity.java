@@ -67,24 +67,14 @@ public class EditNumberActivity extends AppCompatActivity {
                         issueWarning("Your input value cannot be less than 0!");
                     }
                     if (whatField.equals("currentValue")){
-                        if (userInput < counter.getInitialValue()){
-                            issueWarning("The current value cannot be less than the initial value!");
-                        }
-                        else{
-                            counter.setCurrentValue(userInput);
-                            counterContainer.saveToFile(context);
-                            finish();
-                        }
+                        counter.setCurrentValue(userInput);
+                        counterContainer.saveToFile(context);
+                        finish();
                     }
                     if (whatField.equals("initialValue")){
-                        if(counter.getCurrentValue() < userInput){
-                            issueWarning("The initial value cannot be greater than the current value!");
-                        }
-                        else{
-                            counter.setInitialValue(userInput);
-                            counterContainer.saveToFile(context);
-                            finish();
-                        }
+                        counter.setInitialValue(userInput);
+                        counterContainer.saveToFile(context);
+                        finish();
                     }
                 }
             }

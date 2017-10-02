@@ -38,7 +38,6 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     private ListView counterListView;
     private Context context;
-    FloatingActionButton newCounterButton;
     private CounterContainer counterContainer = new CounterContainer();
 
     @Override
@@ -47,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         context = getApplicationContext();
 
-        newCounterButton = (FloatingActionButton) findViewById(R.id.mainAddButton);
+        FloatingActionButton newCounterButton = (FloatingActionButton) findViewById(R.id.mainAddButton);
         newCounterButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){

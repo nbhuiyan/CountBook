@@ -119,7 +119,7 @@ public class CounterDetailsActivity extends AppCompatActivity {
         decreaseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (counter.getInitialValue() == counter.getCurrentValue()){
+                if (counter.getCurrentValue() == 0){
                     issueWarning("You cannot decrement beyond this point!");
                 }
                 else{
