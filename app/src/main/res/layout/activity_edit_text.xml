@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.cmput301ualberta.nazim.nazimudd_countbook.EditValueActivity">
+    tools:context="com.cmput301ualberta.nazim.nazimudd_countbook.EditTextActivity">
 
     <EditText
         android:id="@+id/directEditBox"

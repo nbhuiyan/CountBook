@@ -19,23 +19,32 @@ public class NewCounterActivity extends AppCompatActivity {
 
     }
 
-    private boolean validateInput(EditText name, EditText initVal){
-        String name =
-    }
 
     public void addCounter(View view){
+
         EditText newName = (EditText) findViewById(R.id.newNameEditText);
         EditText newInitVal = (EditText) findViewById(R.id.newInitValueEditText);
         EditText newMessage = (EditText) findViewById(R.id.newMessageEditText);
 
-        String name = newName.toString();
         String valString = newInitVal.toString();
-        int val = Integer.parseInt(valString);
+        int initVal = Integer.parseInt(valString);
 
-        if (validateInput(newName, newInitVal)){
-            Counter counter;
+        //ensure initiVal is in range
+        if (initVal < 0){
+            finish();
         }
 
+        //ensure name is not empty
+        if (newName.toString().length() == 0){
+            finish();
+        }
 
+        if (newMessage.length() == 0){
+            Counter counter = new Counter(newName.toString(), initVal, newMessage.toString());
+
+        }
+        else{
+            Counter counter = new Counter(newName.toString(), initVal, newMessage.toString());
+        }
     }
 }

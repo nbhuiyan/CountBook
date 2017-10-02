@@ -16,12 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CounterDetailsActivity"
+        <activity
+            android:name=".CounterDetailsActivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".EditValueActivity"
-            android:parentActivityName=".CounterDetailsActivity"/>
-        <activity android:name=".NewCounterActivity"
-            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".EditTextActivity"
+            android:parentActivityName=".CounterDetailsActivity" />
+        <activity
+            android:name=".NewCounterActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".EditNumberActivity"></activity>
     </application>
 
 </manifest>

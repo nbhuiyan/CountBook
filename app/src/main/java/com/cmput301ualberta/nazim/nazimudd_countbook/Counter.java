@@ -10,11 +10,11 @@ public class Counter {
 
     private String name;
     private Date date;
-    private Integer currentValue;
-    private Integer initialValue;
+    private int currentValue;
+    private int initialValue;
     private String message;
 
-    public Counter(String name, Integer initialValue, String message){
+    public Counter(String name, int initialValue, String message){
         this.name = name;
         this.date = new Date();
         this.currentValue = initialValue;
@@ -22,7 +22,7 @@ public class Counter {
         this.message = message;
     }
 
-    public Counter(String name, Integer initialValue){
+    public Counter(String name, int initialValue){
         this.name = name;
         this.date = new Date();
         this.currentValue = initialValue;
@@ -30,24 +30,12 @@ public class Counter {
         this.message = "";
     }
 
-    public boolean increment(){
-        if(this.currentValue>=0){
-            this.currentValue++;
-            return true;
-        }
-        else{
-            return false;
-        }
+    public void increment(){
+        this.currentValue++;
     }
 
-    public boolean decrement(){
-        if(this.currentValue>0){
-            this.currentValue--;
-            return true;
-        }
-        else{
-            return false;
-        }
+    public void decrement(){
+        this.currentValue--;
     }
 
     public String getName() {
@@ -62,27 +50,27 @@ public class Counter {
         return date;
     }
 
-    public Integer getCurrentValue() {
-        return currentValue;
+    public int getCurrentValue(){
+        return this.currentValue;
     }
 
-    public void setCurrentValue(Integer currentValue) {
-        this.currentValue = currentValue;
+    public void setCurrentValue(int val) {
+        this.currentValue = val;
     }
 
-    public Integer getInitialValue() {
-        return initialValue;
+    public int getInitialValue(){
+        return this.initialValue;
     }
 
     public void setInitialValue(int initialValue) {
         this.initialValue = initialValue;
     }
 
-    public String setMessage() {
-        return message;
+    public String getMessage() {
+        return this.message;
     }
 
-    public void setMessage(String comment) {
-        this.message = comment;
+    public void setMessage(String msg) {
+        this.message = msg;
     }
 }
