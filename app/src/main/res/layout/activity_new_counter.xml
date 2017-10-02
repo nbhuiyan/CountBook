@@ -15,8 +15,8 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="103dp"
         android:ems="10"
+        android:hint="Enter a name"
         android:inputType="textPersonName"
-        android:text="Enter Name"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,8 +27,8 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="25dp"
         android:ems="10"
+        android:hint="Enter a message"
         android:inputType="textPersonName"
-        android:text="Enter Text"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/newInitValueEditText" />
 
@@ -39,8 +39,8 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="25dp"
         android:ems="10"
+        android:hint="Enter a starting value"
         android:inputType="number"
-        android:text="Enter Starting Value"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/newNameEditText" />
 
@@ -96,7 +96,6 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="20dp"
-        android:onClick="addCounter"
         android:text="Create"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

@@ -25,7 +25,8 @@
         <activity
             android:name=".NewCounterActivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".EditNumberActivity"></activity>
+        <activity android:name=".EditNumberActivity"
+            android:parentActivityName=".CounterDetailsActivity"/>
     </application>
 
 </manifest>

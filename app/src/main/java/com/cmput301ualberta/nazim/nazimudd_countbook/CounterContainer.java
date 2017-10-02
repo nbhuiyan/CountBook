@@ -1,3 +1,16 @@
+/*
+ * CounterContainer
+ *
+ * Version 1.0
+ *
+ * October 2nd, 2017
+ *
+ * Copyright (c) Copyright (c) 2017 nbhuiyan, CMPUT301, University of Alberta - All Rights Reserved.
+ * You may use distribute, or modify this code under terms and conditions of the Code of Student
+ * Behaviour at University of Alberta. You can find a copy of the license in this project.
+ * Otherwise, please contact nazimudd@ualberta.ca.
+ */
+
 package com.cmput301ualberta.nazim.nazimudd_countbook;
 
 import android.content.Context;
@@ -17,7 +30,13 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 /**
- * Created by naz_t on 10/1/2017.
+ * class CounterContainer
+ *
+ * Represents a mechanism to manage the storing, loading, and managing an arry of Counter objects
+ *
+ * @author nbhuiyan
+ * @version 1.0
+ * @since 1.0
  */
 
 public class CounterContainer {
@@ -30,6 +49,10 @@ public class CounterContainer {
         this.counterArrayList = new ArrayList<Counter>();
     }
 
+    /**
+     * loads ArrayList "Counter" Objects from file
+     * @param context
+     */
     public void loadFromFile(Context context){
         try{
             FileInputStream ifStream = context.openFileInput(saveFile);
@@ -37,13 +60,21 @@ public class CounterContainer {
             Gson gson = new Gson();
             Type counterArrayListType = new TypeToken<ArrayList<Counter>>(){}.getType();
             this.counterArrayList = gson.fromJson(bufferedReader, counterArrayListType);
+            ifStream.close();
         }
         //create a new array list if a file does not already exist
-        catch (FileNotFoundException e){ //TODO Check which one works
-            //this.counterArrayList = new ArrayList<Counter>();
-            this.counterArrayList = new ArrayList<>();
+        catch (FileNotFoundException e){
+            this.counterArrayList = new ArrayList<Counter>();
+        }
+        catch (IOException e){
+            throw new RuntimeException();
         }
     }
+
+    /**
+     * saves current ArrayList contents in file
+     * @param context
+     */
 
     public void saveToFile(Context context){
         try{
@@ -56,82 +87,51 @@ public class CounterContainer {
         }
         catch (FileNotFoundException e){
             //shouldn't really happen, since a file not found would create a new file.
-            throw new RuntimeException("does this defy the laws of physics?");
+            throw new RuntimeException("Laws of nature defied!");
         }
         catch (IOException e){
             throw new RuntimeException();
         }
     }
 
+    /**
+     * method to obtain the entire ArrayList of the Counter objects
+     * @return ArrayList"Counter"
+     */
     public ArrayList<Counter> getContainerAsArray(){
         return this.counterArrayList;
     }
 
+    /**
+     * adds a new counter to the array list. does not save to file.
+     * @param counter
+     */
     public void addNewCounter(Counter counter){
         this.counterArrayList.add(counter);
     }
 
+    /**
+     * deletes the counter at the specified index. does not save state to file.
+     * @param index
+     */
     public void deleteCounter(int index){
         this.counterArrayList.remove(index);
-    }
-
-    public void incrementCounter(int index){
-        Counter counter = this.counterArrayList.get(index);
-        counter.increment();
-    }
-
-    public void decrementCounter(int index){
-        Counter counter = this.counterArrayList.get(index);
-        counter.decrement();
-    }
-
-    public void editInitVal(int index, int val){
-        Counter counter = this.counterArrayList.get(index);
-        counter.setInitialValue(val);
-    }
-
-    public void editCurrentVal(int index, int val){
-        Counter counter = this.counterArrayList.get(index);
-        counter.setCurrentValue(val);
-    }
-
-    public void editName(int index, String name){
-        Counter counter = this.counterArrayList.get(index);
-        counter.setName(name);
 
     }
 
-    public void editMessage(int index, String msg){
-        Counter counter = this.counterArrayList.get(index);
-        counter.setMessage(msg);
-
-    }
-
+    /**
+     * returns the number of Counter objects in the CounterContainer
+     * @return
+     */
     public int getSize(){
         return this.counterArrayList.size();
     }
 
-    public int getInitVal(int index){
-        Counter counter = this.counterArrayList.get(index);
-        return counter.getInitialValue();
-    }
-
-    public int getCurrentVal(int index){
-        Counter counter = this.counterArrayList.get(index);
-        return counter.getCurrentValue();
-
-    }
-
-    public String getName(int index){
-        Counter counter = this.counterArrayList.get(index);
-        return counter.getName();
-    }
-
-    public String getMessage(int index){
-        Counter counter = this.counterArrayList.get(index);
-        return counter.getMessage();
-    }
-
+    /**
+     * returns the counter at the specified index
+     * @param index
+     * @return Counter
+     */
     public Counter getCounter(int index){
         return this.counterArrayList.get(index);
     }
